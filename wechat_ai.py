@@ -35,9 +35,9 @@ def search_people(people_name):
 
 def listen_msg():
     reply = '中，无法及时查看消息，有事打电话[自动回复]'
-    reply_status = '自动回复开启:\n'\
-    @itchat.msg_register(TEXT, isFriendChat=True)    # 注册消息监听
+    reply_status = '自动回复开启:\n'
 
+    @itchat.msg_register(TEXT, isFriendChat=True)    # 注册消息监听
     def text_reply(msg):
         msg_re = msg['Text']
         global status    # 自动回复状态
